@@ -87,3 +87,28 @@ const lastName = "Lovelace";
 lastNameLength = lastName.length;
 console.log(lastNameLength);
 //------------------------
+const myArray = [50, 60, 70];
+console.log(myArray[0]);
+const myData = myArray[0];
+//-------------------
+// Налаштування
+const myArray1 = [18, 64, 99];
+// Змініть код лише під цим рядком
+myArray1[0] = 45;
+const myArray2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [[10, 11, 12], 13, 14],
+  ];
+  const myData1 = myArray2[2][1];
+  //-------------------
+const myArray4 = [["John", 23], ["cat", 2]];
+// Змініть код лише під цим рядком
+myArray4.push(["dog", 3]);
+  //-------------------// .pop() заміна осанього елемента
+const myArray5 = [["John", 23], ["cat", 2]];
+// Змініть код лише під цим рядком
+const removedFromMyArray = myArray5.pop("dog", 1);
+console.log(removedFromMyArray);
+console.log(myArray5);
