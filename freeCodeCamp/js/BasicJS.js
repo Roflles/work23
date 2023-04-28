@@ -112,3 +112,20 @@ const myArray5 = [["John", 23], ["cat", 2]];
 const removedFromMyArray = myArray5.pop("dog", 1);
 console.log(removedFromMyArray);
 console.log(myArray5);
+// Налаштування
+const myArray6 = [["John", 23], ["dog", 3]];
+myArray6.shift();
+// Змініть код лише під цим рядком
+myArray6.unshift(["Paul", 35]);
+//-------------------//
+function reusableFunction() {
+  console.log("Hi World");
+}
+reusableFunction();
+//-------------------//
+function timesFive(num) {
+  return num * 5;
+}
+const answer = timesFive(3);
+//-------------------//
+  
