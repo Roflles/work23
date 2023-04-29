@@ -27,7 +27,7 @@ let fact = "is cool!"; // Change this line
 fact = "is awesome!";
 console.log(FCC, fact); // Change this line
 // -----------------------
-const sum = 10 + 10;
+const sum1 = 10 + 10;
 const difference = 45 - 33;
 const product = 8 * 10;
 const quotient = 66 / 33;
@@ -128,4 +128,52 @@ function timesFive(num) {
 }
 const answer = timesFive(3);
 //-------------------//
-  
+function myLocalScope() {
+  // Змініть код лише під цим рядком
+let myVar = "foo";
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+//-------------------//
+// myVar не визначений за межами myLocalScope
+console.log('outside myLocalScope', myVar);
+//-------------------//
+const outerWear = "T-Shirt";
+function myOutfit() {
+  // Змініть код лише під цим рядком
+  const outerWear = "sweater";
+  // Змініть код лише над цим рядком
+  return outerWear;
+}
+myOutfit();
+//-------------------//
+let sum = 0;
+function addFive() {
+  sum = sum + 5;
+}
+addThree();
+addFive();
+//-------------------//
+let processed = 0;
+function processArg(num) {
+  return (num + 3) / 5;
+}
+processed = processArg(7);
+//-------------------//
+function nextInLine(arr, item) {
+  // Змініть код лише під цим рядком
+  arr.push(item);
+  var removed = arr.shift();
+  return removed; 
+}
+
+let testArr = [1, 2, 3, 4, 5];
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+//-------------------//
+function welcomeToBooleans() {
+  return true;
+ }
+ welcomeToBooleans();
+ //-------------------//
