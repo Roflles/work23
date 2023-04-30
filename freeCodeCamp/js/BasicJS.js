@@ -177,3 +177,36 @@ function welcomeToBooleans() {
  }
  welcomeToBooleans();
  //-------------------//
+ function trueOrFalse(wasThatTrue) {
+if(wasThatTrue ) {
+  return "Yes, that was true";
+}
+return "No, that was false";
+}
+ //-------------------//
+ function testEqual(val) {
+  if (val == 12) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+testEqual(10);
+ //-------------------//
+ function testLessThan(val) {
+  if (val < 25) {  
+    return "Under 25";
+  }
+  if (val < 55) {  
+    return "Under 55";
+  }
+  return "55 or Over";
+}
+testLessThan(10);
+ //-------------------//
+function testLogicalAnd(val) {
+  if (val >= 25 && val <= 50) {
+      return "Yes";
+  }
+  return "No";
+}
+testLogicalAnd(10);
