@@ -257,3 +257,89 @@ if(num < 5) {
 }
 testSize(7);
 //-------------------//
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par",
+              "Bogey", "Double Bogey", "Go Home!"];
+function golfScore(par, strokes) {
+if (strokes == 1) {
+    return names[0];
+} else if(strokes <= par -2){
+  return names[1];
+} else if(strokes === par -1) {
+  return names[2];
+} else if(strokes === par) {
+  return names[3];
+} else if(strokes === par +1) {
+  return names[4];
+} else if(strokes === par +2) {
+  return names[5];
+} else {
+  return names[6];
+}         
+  return "Change Me";
+}
+golfScore(5, 4);
+//-------------------//
+function caseInSwitch(val) {
+  let answer = "";
+switch (val) {
+    case 1:
+      answer = "alpha";
+      break;
+    case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "gamma";
+      break;
+    case 4:
+      answer = "delta";
+      break;
+  }
+
+  return answer;
+}
+caseInSwitch(1);
+//-------------------//
+function switchOfStuff(val) {
+  let answer = "";
+  switch (val) {
+    case "a":
+      answer = "apple";
+      break;
+    case "b":
+      answer = "bird";
+      break;
+    case "c":
+      answer = "cat";
+      break;
+    default:
+        answer = "stuff";
+        break;   
+  }
+  return answer;
+}
+switchOfStuff(1);
+//-------------------//
+function sequentialSizes(val) {
+  let answer = "";
+switch (val) {
+  case 1:
+  case 2:
+  case 3:
+    answer = "Low";
+    break;
+  case 4:
+  case 5:
+  case 6:
+    answer = "Mid";
+    break;
+  case 7:
+  case 8:
+  case 9:
+    answer = "High";
+    break;
+}
+  return answer;
+}
+sequentialSizes(1);
+//-------------------//
