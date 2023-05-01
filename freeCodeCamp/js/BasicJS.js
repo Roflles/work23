@@ -210,3 +210,50 @@ function testLogicalAnd(val) {
   return "No";
 }
 testLogicalAnd(10);
+ //-------------------//
+function testLogicalOr(val) {
+  if (val > 20 || val < 10) {
+    return "Outside";
+}
+return "Inside";
+}
+testLogicalOr(15);
+//-------------------//
+function testElse(val) {
+  let result = "";
+  if (val > 5) {
+    result = "Bigger than 5";
+  } else {
+    result = "5 or Smaller";
+  }
+  return result;
+}
+testElse(4);
+//-------------------//
+function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  } else if (val < 5) {
+    return "Smaller than 5";
+  } else {
+    return "Between 5 and 10";
+  }
+}
+testElseIf(7);
+//-------------------//
+function testSize(num) {
+if(num < 5) {
+  return "Tiny"; 
+} else if(num < 10) {
+  return "Small";
+} else if(num < 15) {
+  return "Medium";
+} else if(num < 20) {
+  return "Large";
+} else {
+  return "Huge";
+}
+  return "Change Me";
+}
+testSize(7);
+//-------------------//
