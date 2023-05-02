@@ -373,15 +373,67 @@ if (a < 0 || b < 0) {
 }
 abTest(2,2);
 //-------------------//
-
+let count = 0;
+function cc(card) {
+if (card <= 6) {
+  count++;
+} else if (card <= 9) {
+  count += 0;
+} else {
+  count--;
+}
+if (count <= 0){
+  return count + " Hold";
+} else {
+  return count + " Bet"; 
+}
+}
+cc(2); cc(3); cc(7); cc('K'); cc('A');
 //-------------------//
-
+const testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+const playerNumber = 16; 
+const player = testObj[playerNumber]; 
+console.log(player);
 //-------------------//
-
+function phoneticLookup(val) {
+  let result = "";
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+  result = lookup[val];
+  return result;
+}
+phoneticLookup("charlie");
 //-------------------//
-
+function checkObj(obj, checkProp) {
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }
+}
 //-------------------//
-
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+const gloveBoxContents = myStorage.car.inside["glove box"];
 //-------------------//
 
 //-------------------//
