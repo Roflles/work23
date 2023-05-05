@@ -435,5 +435,90 @@ const myStorage = {
 };
 const gloveBoxContents = myStorage.car.inside["glove box"];
 //-------------------//
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+function updateRecords(records, id, prop, value) {
+  if (prop !== 'tracks' && value !== "") {
+    records[id][prop] = value
+  } else if (prop === 'tracks' && records[id].hasOwnProperty('tracks') === false) {
+    records[id][prop] = [value]
+  } else if (prop === 'tracks' && value !== "") {
+    records[id][prop].push(value)
+  } else if (value === "") {
+    delete records[id][prop]
+  }
+  return records;
+}
+updateRecords(recordCollection, 2548, "Let It Rock", "");
+//-------------------//
+const myArray7 = [];
+let i = 5;
+while(i >= 0) {
+  myArray.push(i);
+  i--;
+}
+console.log(myArray7);
+//-------------------//
+const myArray8 = [];
+for (let i = 1; i <= 5; i++) {
+  myArray.push(i);
+}
+console.log(myArray8);
+//-------------------//
+const myArray9 = [];
+for (let i = 1; i <= 9; i += 2) {
+  myArray.push(i);
+}
+console.log(myArray9);
+//-------------------//
+const myArray10 = [];
+for (let i = 9; i > 0; i -= 2) {
+  myArray.push(i);
+}
+console.log(myArray10);
+//-------------------//
+const myArr11 = [2, 3, 4, 5, 6];
+var total = 0;
+for (var i1 = 0; i1 < myArr11.length; i1++) {
+  total += myArr11[i1];
+}
+console.log(total);
+//-------------------//
+function multiplyAll(arr) {
+  let product = 1;
+  for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[i].length; j++) {
+        product *= arr[i][j];
+      }
+  }
+  return product;
+}
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+//-------------------//
+
+//-------------------//
+
+//-------------------//
+
+//-------------------//
+
+//-------------------//
 
 //-------------------//
