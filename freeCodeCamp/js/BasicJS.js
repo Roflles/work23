@@ -512,13 +512,109 @@ function multiplyAll(arr) {
 }
 multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 //-------------------//
-
+const myArray11 = [];
+let i1 = 10;
+do {
+  myArray11.push(i);
+  i1++;
+} while (i1 <= 10);
+console.log(myArray11);
 //-------------------//
-
+function sum(arr, n) {
+if (n <= 0) {
+    return 0;
+  } else {
+    return sum(arr, n -1) + arr[n - 1];
+  }
+}
 //-------------------//
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
 
+function lookUpProfile(name, prop) {
+  for (let i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      if (prop in contacts[i]) {
+        return contacts[i][prop];
+      } else {
+        return "No such property";
+      }
+    }
+  }
+  return "No such contact";
+}
+lookUpProfile("Akira", "likes");
 //-------------------//
-
+function convertToInteger(str) {
+  return parseInt(str);
+ }
+ convertToInteger("56");
 //-------------------//
-
+function checkEqual(a, b) {
+  return a == b ? "Equal" : "Not Equal";
+ }
+ checkEqual(1, 2);
+ //-------------------//
+/*
+function findGreaterOrEqual(num) {
+  if (num > 0) {
+    return "positive";
+  }
+  else if (num < 0) {
+    return "negative";
+  }
+  else {
+    return "zero";
+  }
+}
+*/
+ function checkSign(num) {
+  return (num > 0) ? "positive" : (num < 0) ? "negative" : "zero";
+}
+checkSign(10);
+//-------------------//
+function countdown(n){
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray  = countdown(n - 1);
+    countArray.unshift(n); 
+    return countArray ;
+  }
+}
+console.log(countdown(5))
+//-------------------//
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum < startNum) {
+   return [];
+ } else {
+   const numbers = rangeOfNumbers(startNum, endNum - 1);
+   numbers.push(endNum);
+   return numbers;
+ }
+};
 //-------------------//
