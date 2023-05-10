@@ -119,15 +119,62 @@ const stats = {
   // const half = (stats) => (stats.max + stats.min) / 2.0; 
   const half = ({max, min}) => ((max + min) / 2.0);
 //---------------------//
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+  const failureItems = [];
+  for (let i = 0; i < arr.length; i++) {
+    failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
+  }
+  console.log(failureItems);
+  return failureItems;
+}
+const failuresList = makeList(result.failure);
 
 //---------------------//
-
+const createPerson = (name, age, gender) => {
+return ({name, age, gender});
+  // return {
+  //   name: name,
+  //   age: age,
+  //   gender: gender
+  // };
+};
 //---------------------//
-
+class Vegetable {
+  constructor(name) {
+    this.name = name;
+  }
+}
+const carrot = new Vegetable('carrot');
+console.log(carrot.name);
 //---------------------//
-
+class Thermostat {
+  constructor(fahrenheit) {
+    this._fahrenheit = fahrenheit;
+  }
+  get temperature() {
+    return (5 / 9) * (this._fahrenheit - 32);
+  }
+  set temperature(celsius) {
+    return this._fahrenheit = (celsius * 9.0) / 5 + 32;
+  }
+}
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
 //---------------------//
-
+export const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+export {lowercaseString};
 //---------------------//
 
 //---------------------//
